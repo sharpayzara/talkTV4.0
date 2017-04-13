@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/live_full_controll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--播放器顶部控制条-->
+    <include
+        layout="@layout/player_controller_top"
+       />
+
+    <!-- 右侧点击按钮 -->
+
+
+    <LinearLayout
+        android:id="@+id/ll_controll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/channel_change_bg"
+            android:layout_width="@dimen/circle_height"
+            android:layout_height="@dimen/circle_height"
+            android:background="@mipmap/play_btn_bg_nor"
+            android:layout_marginBottom="10dip"
+            android:text="换台"
+            android:textColor="@color/cp_default_color"
+            />
+
+        <Button
+            android:id="@+id/source_change_bg"
+            android:layout_width="@dimen/circle_height"
+            android:layout_height="@dimen/circle_height"
+            android:background="@mipmap/play_btn_bg_nor"
+            android:text="换源"
+            android:textColor="@color/cp_default_color"
+            />
+
+        <Button
+            android:id="@+id/program_bg"
+            android:layout_width="@dimen/circle_height"
+            android:layout_height="@dimen/circle_height"
+            android:background="@mipmap/play_btn_bg_nor"
+            android:layout_marginTop="10dip"
+            android:text="节目单"
+            android:textColor="@color/cp_default_color"
+            />
+
+    </LinearLayout>
+
+    <!--锁屏键-->
+    <ImageButton
+        android:id="@+id/lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/unlocked"
+        android:background="@color/transparent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bottom_control"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/play_down">
+
+        <ImageButton
+            android:id="@+id/small_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:src="@mipmap/play_zoom_out" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"/>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"  >
+    <RelativeLayout
+        android:id="@+id/img_rlt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/launch_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/launch_pic"/>
+        <ImageView
+            android:id="@+id/logo_iv"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="140dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/logo1"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="当前版本V 1.2.3"
+        android:textSize="18sp"
+        android:textColor="@color/history_bg"
+        android:layout_centerInParent="true"
+        android:id="@+id/version_code"/>
+</RelativeLayout>

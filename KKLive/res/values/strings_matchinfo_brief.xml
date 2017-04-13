@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+<string name="matchinfo_brief">
+    <![CDATA[ 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;歌霸天下，全民K歌集结号，我们一起上央视!</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCTV音乐频道2014年歌唱类竞技节目《歌霸天下》火热启动，2014年1月9日--2015年2月8日KK唱响将会定期举办歌霸天下选拔比赛，优秀选手推荐上央视！不限曲风、不限年龄，只要你热爱唱歌都可以报名参加！我们需要一个爱唱歌的你。</br> 
+<br></br> 
+<br><b>参赛对象:</b></br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KK唱响所有用户</br> 
+<br></br> 
+<br><b>比赛流程:</b></br> 
+<br>1、报名&海选</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;报名：报名时间为2014年1月20日0：00-2月8日24:00。用户报名后即可进入海选。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;海选：根据选手报名后获得的投票分、礼物分总和进行排名，前120名选手晋级小组赛。投票分按选手获得的投票数进行排名，第一名选手获得60分，之后每一名得分依次递减0.3分；礼物分按选手收到的专属礼物(上央视)数进行排名，第一名选手获得40分，之后每一名得分依次递减0.2分。</br> 
+<br></br> 
+<br>2、小组赛</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比赛分为8组每组15人进行，根据选手小组赛期间获得的投票分、礼物分、评委分总和进行排名，每组前6名，总计48人晋级决赛并推荐至CNTV进行央视复选赛。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投票分按选手获得的投票数进行排名，第一名选手获得50分，之后每一名得分依次递减2分；礼物分按选手收到的专属礼物(上央视)数进行排名，第一名选手获得25分，之后每一名得分依次递减1分；评委分总分25分，在比赛过程中由专业评委给出。</br> 
+<br></br> 
+<br>3、决赛</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比赛分为4组每组12人进行，根据选手决赛期间获得的投票分、礼物分、评委分总和进行排名，每组冠军推荐进入央视比赛。每组冠亚季军，总计12人晋级人气争霸赛。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投票分按选手获得的投票数进行排名，第一名选手获得40分，之后每一名得分依次递减2分；礼物分按选手收到的专属礼物(上央视)数进行排名，第一名选手获得30分，之后每一名得分依次递减1分；评委分总分30分，在比赛过程中由来自央视的专业评委等给出。</br> 
+<br></br> 
+<br>4、人气争霸赛</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比赛根据选手人气争霸赛期间获得的投票分、礼物分、评委分总和进行排名，冠军获“人气歌王”称号并直接晋级央视月赛。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投票分按选手获得的投票数进行排名，第一名选手获得40分，之后每一名得分依次递减2分；礼物分按选手收到的专属礼物(上央视)数进行排名，第一名选手获得30分，之后每一名得分依次递减1分；评委分总分30分，在比赛过程中由来自央视的专业评委等给出。</br> 
+<br></br> 
+<br><b>活动说明：</b></br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、	每个ID每天有5次投票机会，过期清零。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、	每个ID每天对一位选手只能投一票。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、	选手不能对自己投票。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、	每个比赛阶段单独计分，不累计上一比赛阶段分数；每个比赛场次结束后，该场次所有选手投票冻结。</br> 
+<br></br> 
+<br><b>参赛奖励：</b></br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小组赛晋级选手（48人）可获得跑车礼物（价值50000秀币）一辆。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;决赛晋级选手（4人）获得飞机礼物（价值100000秀币）一架。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人气争霸赛冠军（1人）可获得爱的火山礼物（价值1000000秀币）一个。</br> 
+<br></br> 
+<br><b>其他：</b></br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、	比赛期间，须严格遵守KK唱响网站管理规则，如出现恶意留言、诽谤攻击、发布广告等违规行为，KK唱响有权对相关账号作出封号、取消比赛资格等处理</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、	严禁反复注册小号、使用刷票机进行刷票等作弊行为，如发现相应投票全部作废，KK唱响有权取消相关账号的比赛资格并进行封禁。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、	参赛奖励将在比赛结束后3个工作日内发放。</br> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、	本次比赛最终解释权归KK唱响所有。</br> 
+<br></br> 
+ ]]> 
+</string>
+
+</resources>

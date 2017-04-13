@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="80dp"
+    android:layout_height="60dp"
+    android:clickable="true"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/avatar_view"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kk_default_avatar_big_women" />
+
+    <ImageView
+        android:id="@+id/choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="1dip"
+        android:layout_marginBottom="1dip"
+        android:layout_gravity="center"
+        android:background="@drawable/kk_register_success_no_choice"
+        android:scaleType="centerInside"
+        android:src="@drawable/kk_register_success_choice" >
+    </ImageView>
+
+</RelativeLayout>

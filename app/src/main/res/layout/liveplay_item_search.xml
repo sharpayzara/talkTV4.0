@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="47dp"
+    android:id="@+id/rl_liveplay_search_item">
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="37.5dp"
+        android:id="@+id/iv_search_liveplay_item_img"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="37.5dp"
+        android:id="@+id/iv_search_liveplay_item_title"
+        android:textSize="14sp"
+        android:textColor="#464646"
+        android:text="CCTV-1 综合"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@id/iv_search_liveplay_item_img"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="32dp"
+        android:background="#FFE7E7E7"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/iv_search_liveplay_item_defaltimg"
+        android:layout_marginRight="8dp"/>
+    <ImageView
+        android:id="@+id/iv_search_liveplay_item_defaltimg"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@mipmap/livetv_livetelecast_btn"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="13dp"
+        />
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#F2F1F2"/>
+</RelativeLayout>

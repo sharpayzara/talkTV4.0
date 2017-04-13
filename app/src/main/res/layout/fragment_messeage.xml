@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="56dp"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:id="@+id/rl_msg_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_nomsg"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/download"
+            android:layout_above="@+id/tv_nomsg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="17dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_nomsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无消息"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/tv_nomsg2"
+            />
+        <TextView
+            android:id="@+id/tv_nomsg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在详情页可以点击缓存按钮进行缓存"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_centerInParent="true"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_msg_full"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        >
+        <ListView
+            android:id="@+id/lv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+    </RelativeLayout>
+</FrameLayout>

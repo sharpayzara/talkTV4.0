@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="76dip"
+    >
+
+    <ImageButton
+        android:id="@+id/remind"
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dip"
+        android:src="@mipmap/livetv_livetelecast_btn"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/program_name"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dip"
+        android:layout_toLeftOf="@+id/remind"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="bottom"
+        android:paddingBottom="3dip"
+        />
+
+    <TextView
+        android:id="@+id/program_time"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dip"
+        android:layout_toLeftOf="@+id/remind"
+        android:layout_below="@+id/program_name"
+        android:gravity="top"
+        android:textColor="#D3D3D3"
+        android:paddingTop="3dip"
+        />
+</RelativeLayout>

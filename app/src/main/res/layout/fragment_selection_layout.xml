@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/selection_llt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refreshLayout"
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:background="@color/bg_color"
+            android:layout_height="match_parent">
+            <com.sumavision.talktv2.ui.widget.LMRecyclerView
+                android:id="@+id/lm_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.sumavision.talktv2.ui.widget.LMRecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <com.sumavision.talktv2.ui.widget.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+    </com.sumavision.talktv2.ui.widget.LoadingLayout>
+</RelativeLayout>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ClearableEditText">
+         <attr name="label_text" format="reference" />
+         <attr name="text_hint" format="string"/>
+         <attr name="max_length">
+             <flag name="phone" value="11" />
+             <flag name="qq"  value="16" />
+             <flag name="age" value="2" />
+         </attr>
+    </declare-styleable>
+    
+    <declare-styleable name="KKCustomIndicator">
+	     <attr name="kk_count" format="integer" />
+	     <attr name="kk_width" format="dimension" />
+	     <attr name="kk_height" format="dimension" />
+	     <attr name="kk_margin" format="dimension" />
+	     <attr name="kk_normal_icon" format="reference" />
+	     <attr name="kk_selected_icon" format="reference" />
+	 </declare-styleable>
+	 
+    
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="TabPageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <style name="PageIndicatorDefaults" parent="Theme.ActivityAnim">
+        <item name="TabPageIndicatorStyle">@style/SectionTabStyle</item>
+    </style>
+
+    <style name="SectionTabStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/kk_section_text</item> 
+        <item name="android:paddingLeft">20dip</item> 			  
+        <item name="android:paddingRight">20dip</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textAppearance">@style/textapperance</item>
+        <item name="android:textSize">16sp</item>                 
+        <item name="android:maxLines">1</item>					  
+    </style>
+
+    <style name="textapperance" >
+        <item name="android:textColor">@drawable/kk_section_tab_text_selected</item> <!-- 修改Tab栏字体选中状态 -->
+    </style>
+    
+</resources>

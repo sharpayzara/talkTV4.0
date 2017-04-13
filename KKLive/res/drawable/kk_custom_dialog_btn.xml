@@ -1,0 +1,9 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+	<item android:drawable="@color/transparent" android:state_enabled="false"/>
+    <item android:drawable="@color/transparent" android:state_focused="false" android:state_pressed="false" android:state_selected="false"/>
+    <item android:drawable="@color/kk_custom_dialog_bg" android:state_focused="true"/>
+    <item android:drawable="@color/kk_custom_dialog_bg" android:state_selected="true"/>
+    <item android:drawable="@color/kk_custom_dialog_bg" android:state_pressed="true"/>
+
+</selector>

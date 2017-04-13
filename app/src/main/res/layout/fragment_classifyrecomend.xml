@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+       >
+
+        <LinearLayout
+            android:id="@+id/tab_classify_layout_layout"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:orientation="horizontal"
+            >
+            <android.support.design.widget.TabLayout
+                android:id="@+id/classify_tab_layout"
+                app:tabSelectedTextColor="#f02323"
+                app:tabTextColor="#555555"
+                app:tabIndicatorColor="#f02323"
+                app:tabBackground="@color/tab_color"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_weight="7"/>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/classify_tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab_ll_layout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>

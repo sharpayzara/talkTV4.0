@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="49dp" >
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp" 
+            android:paddingLeft="102dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/kk_room_text_gray"
+            android:textColorHint="@color/kk_text_disable_gray"
+            >
+
+        </EditText>
+        <TextView
+            android:id="@+id/labelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+	        android:textColor="@color/kk_dynamic_fontcolor_context"
+	        android:textSize="@dimen/kk_text_big_size"
+	        android:layout_marginLeft="11dp"
+            />
+        <ImageButton
+		    android:id="@+id/clearBtn"      
+	   		android:layout_width="42dip"
+   			android:layout_height="32dip"
+   			android:background="@color/transparent"
+		    android:layout_marginRight="5dip"
+		    android:layout_gravity="right|center_vertical"
+		    android:src="@drawable/btndelete_selector" 
+		    android:contentDescription="@null"
+		    android:visibility="gone"/>
+ </FrameLayout>

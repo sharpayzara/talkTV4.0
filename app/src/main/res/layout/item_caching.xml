@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_caching_item"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_weight="8">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_caching_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text=""
+                    android:textColor="#444444"
+                    android:textSize="13sp" />
+
+                <ProgressBar
+                    android:id="@+id/pb_caching"
+                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_caching_title"
+                    android:layout_marginTop="10dp"
+                    android:max="100"
+                    android:progress="60"
+                    android:progressDrawable="@drawable/paograssbar_cache" />
+
+                <TextView
+                    android:id="@+id/tv_caching_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pb_caching"
+                    android:layout_marginTop="5dp"
+                    android:text="22.1M"
+                    android:textColor="#777777"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="4"
+            android:layout_gravity="center">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:id="@+id/iv_caching_img"
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY" />
+                <ImageView
+                    android:id="@+id/iv_caching_imgtop"
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cached_imgselect"
+            android:layout_width="0dp"
+            android:layout_height="70dip"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/cb_cached_imgselect"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/checkbox_style"
+                android:button="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

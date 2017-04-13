@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#D9000000">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="59dip"
+            android:text="节目单"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@+id/title"/>
+
+        <ListView
+            android:id="@+id/lv_program_weeklist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:layout_below="@+id/line"
+            android:divider="@null"
+            android:layout_marginTop="5dip"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/program_title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#E6273E52">
+
+            <TextView
+                android:id="@+id/channalname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/mytextsize4"
+                android:layout_toRightOf="@+id/img"
+                android:text="channal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:background="@mipmap/playbill"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="23dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E6273E52"
+            android:layout_below="@+id/program_title">
+            <ListView
+                android:id="@+id/lv_program_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/no_program"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/program_title"
+            android:gravity="center"
+            android:text="暂无节目单"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

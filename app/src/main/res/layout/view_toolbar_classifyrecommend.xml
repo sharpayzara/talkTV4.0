@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    android:id="@id/app_bar"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:elevation="3dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f1f1f1"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            app:title=" "
+            app:titleMarginStart="0dp">
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
+                android:id="@+id/btn_classify_more"
+                android:background="@drawable/list_more_selector"
+                android:layout_marginLeft="5dp"
+                />
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/btn_classify_search"
+                android:layout_marginLeft="160dp"
+                android:background="@mipmap/index_nav_search2"
+                android:clickable="true"/>
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+
+</android.support.design.widget.AppBarLayout>

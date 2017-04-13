@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--<ImageView-->
+    <!--android:id="@+id/player_iv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="220dp"-->
+    <!--android:background="@color/black"/>-->
+    <RelativeLayout
+        android:id="@+id/rlt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/black"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/pic_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detail_rlt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/program_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_name"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:drawableLeft="@mipmap/playdetail_playtimes"
+            tools:text=" 311万次播放"
+            android:gravity="center_vertical"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/program_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            tools:text="魔兽世界"
+            android:maxLines="2"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:ellipsize="end"
+            android:layout_toLeftOf="@id/program_count"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</LinearLayout>

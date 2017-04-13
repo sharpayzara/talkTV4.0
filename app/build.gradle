@@ -1,0 +1,169 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'newlens'
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "com.sumavision.talktv2"
+
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode 4022
+        versionName "4.0.2.2"
+        multiDexEnabled true
+    }
+    signingConfigs {
+        offical {
+            keyAlias 'socialtv2'
+            keyPassword '123456'
+            storeFile file('/disk/MyFile/socialtv2.keystore')
+            storePassword '123456'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.offical
+            debuggable false
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.offical
+        }
+
+        android {
+            lintOptions {
+                checkReleaseBuilds false
+                // Or, if you prefer, you can continue to check for errors in release builds,
+                // but continue the build even when errors are found:
+                abortOnError false
+            }
+        }
+
+//    dexOptions {
+//        javaMaxHeapSize "4g"
+//    }
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+        testCompile rootProject.ext.libJunit
+        //    compile files('libs/SohuPlayerSDK_201512081716.jar')
+        //supportLib
+        compile rootProject.ext.supportLibAppCompat
+        compile rootProject.ext.supportLib
+        compile rootProject.ext.supportLibDesign
+        compile rootProject.ext.supportLibRecyclerview
+        compile rootProject.ext.supportLibCardview
+        compile rootProject.ext.libRetrofit
+        compile rootProject.ext.libRetrofitConverterGson
+        compile rootProject.ext.libRetrofitAdapterRxJava
+        debugCompile rootProject.ext.libDebugLeakBird
+        releaseCompile rootProject.ext.libReleaseLeakBird
+        testCompile rootProject.ext.libTestLeakBird
+        compile rootProject.ext.libOkHttp
+        compile rootProject.ext.libGlide
+        compile rootProject.ext.libStetho
+        compile rootProject.ext.libStethoOkhttp
+        compile rootProject.ext.libJlog
+        compile rootProject.ext.libButterknife
+        apt rootProject.ext.libButterknifeCompiler
+        compile rootProject.ext.libGson
+        compile rootProject.ext.libRxAndroid
+        compile rootProject.ext.libRxLifecycle
+        compile rootProject.ext.libRxLifecycleComponents
+        compile rootProject.ext.libPhotoView
+        compile rootProject.ext.libMultidex
+        compile rootProject.ext.libJackson
+        compile rootProject.ext.libOrmliteCore
+        compile rootProject.ext.libOrmliteAndroid
+        compile rootProject.ext.libNumberProgressBar
+        compile rootProject.ext.libRxBus
+        compile rootProject.ext.libPagerslidingtabstripVersion
+        compile rootProject.ext.libGridlaout
+        compile rootProject.ext.libEventBus
+        compile rootProject.ext.libAsync
+        compile rootProject.ext.libUmeng
+        compile rootProject.ext.libDataPicker
+        compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+        compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+        //    compile 'com.github.waynell:VideoListPlayer:1.2'
+        compile files('libs/cyberplayer-sdk.jar')
+        compile files('libs/SohuPlayerSDK_201512081716.jar')
+        compile files('libs/pushservice-5.0.0.66.jar')
+        compile project(':offlinecachelibrary')
+        compile project(':cachingwhileplaying')
+        compile project(':KKLive')
+        compile project(':LibMarsdaemon')
+        compile files('libs/mta-sdk-1.6.2.jar')
+        compile files('libs/open_sdk_r5756.jar')
+        compile files('libs/weibosdkcore_release.jar')
+        compile files('libs/SocialSDK_QQZone_3.jar')
+        compile files('libs/umeng_social_sdk.jar')
+        compile files('libs/SocialSDK_WeiXin_1.jar')
+        compile files('libs/SocialSDK_WeiXin_2.jar')
+        compile files('libs/SocialSDK_Sina.jar')
+        compile files('libs/weiboSDKCore_3.1.4.jar')
+        compile "com.networkbench.newlens.agent.android:nbs.newlens.agent:2.5.0"
+        compile files('libs/pdr.jar')
+        compile files('libs/universal-image-loader-1.9.0.jar')
+        compile files('libs/ui.jar')
+        compile files('libs/nineoldandroids-2.4.0.jar')
+        compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.0'
+        compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.6.0'
+//        compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.6.0'
+//        compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.6.0'
+//        compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.6.0'
+//        compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.6.0'
+        compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.6.0'
+        compile files('libs/Baidu_MobAds_SDK.jar')
+    }
+
+    afterEvaluate {
+        tasks.matching {
+            it.name.startsWith('dex')
+        }.each { dx ->
+            if (dx.additionalParameters == null) {
+                dx.additionalParameters = []
+            }
+            dx.additionalParameters += '--multi-dex' // enable multidex
+
+            // optional
+            // dx.additionalParameters += "--main-dex-list=$projectDir/<filename>".toString() // enable the main-dex-list
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+dependencies {
+    compile files('libs/Baidu_MobAds_SDK.jar')
+    compile files('libs/nativeui.jar')
+    compile files('libs/gallery.jar')
+    compile files('libs/nativeObj.jar')
+    compile files('libs/device.jar')
+    compile files('libs/file.jar')
+    compile files('libs/invocation.jar')
+    compile files('libs/json_simple-1.1.jar')
+    compile files('libs/messaging.jar')
+    compile files('libs/Msc.jar')
+    compile files('libs/navigatorui.jar')
+    compile files('libs/nopermission.jar')
+    compile files('libs/uploader.jar')
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/kk_background_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/kk_title_bar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/kk_home_tab_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:layout_height="32dip" >
+
+            <TextView
+                android:id="@+id/phone_register"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/kk_phone_register"
+                android:textColor="@color/kk_news_notify_bnt"
+                android:textSize="@dimen/kk_fullsize_button" />
+
+            <TextView
+                android:id="@+id/user_name_register"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/kk_username_register"
+                android:textColor="@color/kk_app_color_dark_gray"
+                android:textSize="@dimen/kk_fullsize_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="4dip"
+            android:layout_marginLeft="14dip"
+            android:layout_marginRight="14dip" >
+
+            <ImageView
+                android:id="@+id/cursor"
+                android:layout_width="fill_parent"
+                android:layout_height="4dip"
+                android:layout_marginRight="14dip"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/kk_my_myattention_line" />
+
+            <View
+                android:id="@+id/cursor_"
+                android:layout_width="fill_parent"
+                android:layout_height="4dip"
+                android:layout_marginLeft="14dip"
+                android:layout_weight="1"
+                android:background="@drawable/kk_login_bg"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/kk_background_white" />
+
+</LinearLayout>

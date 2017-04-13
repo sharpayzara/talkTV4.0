@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/arts_selection"
+    android:layout_width="150dp"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="14dp">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2" />
+
+    <TextView
+        android:id="@+id/item_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_name"
+        android:drawableStart="@mipmap/playdetail_playtimes24"
+        android:paddingTop="3dp"
+        android:textSize="10sp"
+        tools:text="311万次播放">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/art_cached_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/item_name"
+        android:paddingTop="3dp"
+        android:text="已缓存"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/art_cached_iv"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/item_name"
+        android:layout_toLeftOf="@id/art_cached_tv"
+        android:src="@mipmap/cached_pic"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/art_caching_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/item_name"
+        android:layout_marginBottom="5dp"
+        android:paddingTop="3dp"
+        android:text="缓存中"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/art_caching_iv"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/item_name"
+        android:layout_toLeftOf="@id/art_caching_tv"
+        android:src="@mipmap/caching_pic" />
+
+</RelativeLayout>

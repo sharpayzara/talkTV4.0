@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/kk_title_bar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/head_list"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:background="#f7f7f7"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_weight="61"
+            android:text="@string/kk_song_name"
+            android:textSize="16sp"
+
+            android:textColor="#37a7e7" />
+
+        <TextView
+            android:id="@+id/song_operate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:text="@string/kk_song_singer"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:textColor="#37a7e7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kk_song_operate"
+            android:layout_weight="38"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#37a7e7"/>
+    </LinearLayout>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/kk_match_uncometitle" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <ListView
+                android:id="@+id/song_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:dividerHeight="1px"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="#dedede"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" />
+
+         <RelativeLayout
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/song_info_pre"
+                 android:background="#000000"
+                 android:paddingLeft="11dp"
+                 android:layout_alignParentBottom="true"
+                 android:clickable="false"
+                 android:focusable="false"
+                 android:paddingTop="8dp"
+                 android:paddingBottom="8dp">
+
+       <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/kk_choice_say"
+              android:textColor="#ffffff"
+              android:text="@string/kk_song_info_one"
+              android:textSize="12sp"
+               />
+       <TextView
+               android:id="@+id/kk_choice_song_first"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/kk_choice_say"
+
+              android:textSize="11sp"
+              android:textColor="#ffffff"
+              android:layout_marginTop="6dp"
+               />
+             <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/kk_choice_song_second"
+                     android:layout_below="@id/kk_choice_song_first"
+                     android:text="@string/kk_choice_song_second"
+                     android:textSize="11sp"
+                     android:textColor="#ffffff"
+                     android:layout_marginTop="6dp"
+                     />
+         </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="@android:style/Widget.ProgressBar.Inverse"
+                android:layout_width="@dimen/kk_progress_size_fullscreen"
+                android:layout_height="@dimen/kk_progress_size_fullscreen" />
+
+            <TextView
+                android:id="@+id/error_info_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dip"
+                android:textColor="@color/kk_app_color_black"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

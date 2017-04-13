@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/light_black2"
+                app:expandedTitleMarginBottom="50dp"
+                app:expandedTitleMarginStart="20dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:expandedTitleTextAppearance="@style/SplcialTitleStyle"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+                >
+                <ImageView
+                    android:id="@+id/img_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:transitionName="@string/app_name"
+                    tools:src="@mipmap/zhuanti_bg"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.5"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:foreground="@mipmap/topic_icon"/>
+                    <TextView
+                        android:id="@+id/detail_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="6"
+                        android:textSize="15sp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="160dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:ellipsize="end"
+                        android:textColor="@color/channel_list_bg"
+                        tools:text="在更快,更高,更强的奥运赛场上，每届奥运会都有人类极限的超越和突破，里约奥运会赛程过半，名的一件事就要数在北京田径世锦赛上的那一惊天一名的一件事就要数在北京田径世锦赛上的那一惊天一博尔特最出名的一件事就要数在北京田径世锦赛上的那一惊天一幢，博尔特一开始页吃了一惊"/>
+
+                    <TextView
+                        android:id="@+id/up_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/detail_tv"
+                        android:layout_marginBottom="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="上滑查看"/>
+
+                    <com.sumavision.talktv2.ui.widget.MyGifView
+                        android:id="@+id/up_index"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_toLeftOf="@id/up_view"
+                        android:layout_above="@id/detail_tv"
+                        android:layout_marginBottom="20dp"/>
+
+                    <TextView
+                        android:id="@+id/br_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="110dp"
+                        android:background="@drawable/shape_special_tip"
+                        android:textSize="14dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="6dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="30dp"
+                        tools:text="博尔特，接地气的“神”"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:minHeight="50dp"
+                    app:layout_collapseMode="pin"
+                    app:navigationIcon="@mipmap/play_right_btn"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-0.5dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.sumavision.talktv2.ui.widget.LMRecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.sumavision.talktv2.ui.widget.LMRecyclerView>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_rlt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+        <Button
+            android:id="@+id/more_option_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/index_nav_more_icon_selector"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginRight="10dp"
+            android:clickable="true"/>
+    </RelativeLayout>
+
+    <com.sumavision.talktv2.ui.widget.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_rlt"
+        android:visibility="gone">
+    </com.sumavision.talktv2.ui.widget.LoadingLayout>
+</RelativeLayout>

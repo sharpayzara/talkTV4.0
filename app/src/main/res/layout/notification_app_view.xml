@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dip" >
+    
+    <ImageView 
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/NotificationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@id/img"
+        android:text="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@id/img"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dip" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/progressBarHorizontal_color"
+            android:layout_width="0dp"
+            android:layout_height="3dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/err_text"
+            style="@style/NotificationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+</RelativeLayout>

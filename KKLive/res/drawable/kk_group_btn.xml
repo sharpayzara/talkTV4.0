@@ -1,0 +1,10 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	
+    <item android:drawable="@color/kk_group_bnt_bg" android:state_enabled="false"/>
+    <item android:drawable="@color/kk_background_white" android:state_focused="false" android:state_pressed="false" android:state_selected="false"/>
+    <item android:drawable="@color/kk_match_offtitle" android:state_focused="true"/>
+    <item android:drawable="@color/kk_match_offtitle" android:state_selected="true"/>
+    <item android:drawable="@color/kk_match_offtitle" android:state_pressed="true"/>
+    
+</selector>

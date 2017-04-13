@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_myhori"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    >
+
+    <FrameLayout
+        android:id="@+id/flt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_myhori_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+            <ImageView
+                android:id="@+id/iv_myhori_topimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/top1"
+                android:visibility="gone"/>
+            <FrameLayout
+                android:id="@+id/tv_rec_frame"
+                android:layout_above="@id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:foreground="@mipmap/image">
+            </FrameLayout>
+            <TextView
+                android:id="@+id/tv_myhori_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="#Fffeff"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_myhori_title"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="美空军基地现不明飞行物"
+        android:textSize="12sp"
+        android:textColor="@color/area_title"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/tv_myhori_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:text="美空军基地现不明飞行物"
+        android:textSize="10sp"
+        android:textColor="#777777"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-4dp" />
+</LinearLayout>

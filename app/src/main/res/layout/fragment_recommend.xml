@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbarAblt"
+        layout="@layout/view_toolbar_home"/>
+    <LinearLayout
+        android:layout_below="@id/toolbarAblt"
+        android:id="@+id/tab_ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:orientation="horizontal"
+        >
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            app:tabSelectedTextColor="#f02323"
+            app:tabTextColor="#555555"
+            app:tabIndicatorColor="#f02323"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="2dp"
+            app:tabBackground="@color/tab_color"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_weight="7"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/invigation_btn"
+            android:src="@drawable/index_nav_navmore_icon_selector"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_ll_layout">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.sumavision.talktv2.ui.widget.LoadingLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.sumavision.talktv2.ui.widget.LoadingLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:id="@+id/spacebtn"></ImageView>
+</RelativeLayout>

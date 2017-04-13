@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="274dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/kk_dialog_view_content_bg"
+
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/kk_custom_dialog_bg"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:textColor="@color/kk_text_black"
+            android:textSize="@dimen/kk_title_text" />
+
+        <RelativeLayout
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_marginBottom="15dip"
+            android:layout_height="wrap_content" >
+             <com.melot.meshow.widget.EditInputLayout
+		        android:id="@+id/name_card_old"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View 
+                android:id="@+id/line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/kk_group_bnt_bg"/>
+            
+            <Button
+                android:id="@+id/positive_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_below="@+id/line"
+                android:background="@drawable/kk_group_btn"
+                android:textColor="@color/kk_im_group_color_btn"
+                android:textSize="@dimen/kk_button_text" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

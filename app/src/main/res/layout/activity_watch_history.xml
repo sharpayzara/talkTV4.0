@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/head_panel_layout" />
+    <RelativeLayout
+        android:layout_below="@id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/watch_history_bg"
+        android:visibility="gone"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/empty_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/empty"/>
+        <TextView
+            android:layout_below="@id/empty_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/watch_history_txt"
+            android:text="暂无观看历史"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/options_llt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ededed">
+
+        <Button
+            android:id="@+id/select_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="全选"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_alignTop="@id/options_llt"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ededed"
+        android:layout_above="@+id/ll_cache_viewgroup"/>
+    <RelativeLayout
+        android:layout_below="@id/head_layout"
+        android:layout_above="@id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/history_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+    <com.sumavision.talktv2.ui.widget.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_below="@id/head_layout"
+        android:layout_height="match_parent"></com.sumavision.talktv2.ui.widget.LoadingLayout>
+</RelativeLayout>

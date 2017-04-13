@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:paddingLeft="7dp"
+    android:paddingRight="7dp"
+    android:paddingTop="7dp">
+    <RelativeLayout
+        android:id="@+id/item_rlt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_no_top_corner_bottom_line">
+
+        <ImageView
+            android:id="@+id/img_iv"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/special_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/channel_num_textcolor"
+            android:layout_below="@id/img_iv"
+            tools:text="2016年里约奥运会中国夺冠时刻" />
+    </RelativeLayout>
+</LinearLayout>

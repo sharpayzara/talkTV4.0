@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_item_flt"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/play_line"
+    android:padding="0.7dp"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <RelativeLayout
+        android:id="@+id/item_rlt"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#555555"
+            android:gravity="center"
+            android:textSize="15sp"
+            tools:text="2"/>
+        <ImageView
+            android:id="@+id/selected_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:src="@mipmap/selected"/>
+
+        <ImageView
+            android:id="@+id/tv_cached_img_in_popupwindow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/cached_pic"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/downloading_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/caching_pic"
+            android:visibility="gone" />
+    </RelativeLayout>
+</FrameLayout>

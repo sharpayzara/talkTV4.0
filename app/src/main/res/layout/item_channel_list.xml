@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="31dip"
+        android:background="#f8f8f8"
+        android:visibility="gone">
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#e7e7e7"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/channel_type"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_below="@+id/line1"
+            android:paddingLeft="10dip"
+            />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#e7e7e7"
+            android:layout_below="@+id/channel_type"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_goplay"
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:layout_below="@+id/top"
+        android:background="@drawable/btn_reply_bg"
+        android:clickable="true"
+        android:layout_toLeftOf="@+id/right_layout"
+         >
+
+        <ImageView
+            android:id="@+id/quan"
+            android:layout_width="80dip"
+            android:layout_height="60dip"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/livetvlogo"/>
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="64dip"
+            android:layout_height="32dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="18dip"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/channel_tv_logo_default"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/channel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/quan"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="6dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#444444"
+            android:textSize="14.5sp" />
+
+        <ImageView
+            android:id="@+id/is_play"
+            android:layout_width="16dip"
+            android:layout_height="16dip"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/channel_name"
+            android:layout_marginTop="11dip"
+            android:layout_marginLeft="3dip"
+            android:visibility="invisible"
+            android:src="@mipmap/playdetail_playtimes24"/>
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/channel_program_name_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/quan"
+            android:layout_below="@id/channel_name"
+            android:maxLines="1"
+            android:textColor="#b8b8b8"
+            android:singleLine="false"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="3dip"
+            android:layout_toRightOf="@id/quan"
+            android:layout_below="@+id/name"
+            android:textColor="#b8b8b8"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/right_layout"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="9dip"
+        android:layout_below="@+id/top"
+        android:background="@color/white"
+        >
+
+        <ImageButton
+            android:id="@+id/collect_btn"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dip"
+            android:background="@color/colorAccent"
+            />
+
+        <ImageView
+            android:id="@+id/infoBtn"
+            android:layout_width="54dip"
+            android:layout_height="25dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dip"
+            android:layout_below="@+id/collect_btn"
+            android:src="@mipmap/program_detail"
+            android:clickable="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

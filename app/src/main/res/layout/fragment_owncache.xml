@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="56dp"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_owncache"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.sumavision.talktv2.ui.widget.PagerSlidingTabStrip xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:pstsDividerColor="@color/transparent"
+            app:pstsIndicatorHeight="1dp"
+            app:pstsIndicatorColor="@color/cache_start_bg"
+            app:pstsShouldExpand="true"
+            app:pstsTabPaddingLeftRight="5dp"
+            app:pstsUnderlineHeight="1dp" />
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true">
+
+
+            <FrameLayout
+                android:id="@+id/fl_owncache"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/spaceSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#ededed"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#000000" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@+id/ll_cache_viewgroup"
+                android:background="#ededed" />
+
+            <LinearLayout
+                android:id="@+id/ll_cache_viewgroup"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ededed"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_caching_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:text="全选"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_caching_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_cache_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_layout"
+            android:layout_below="@id/tabs" />
+
+    </RelativeLayout>
+
+</FrameLayout>

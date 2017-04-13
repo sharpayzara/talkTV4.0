@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f1f1f1"
+    android:minHeight="?attr/actionBarSize"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:title=" ">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/tvfan_logo"
+            android:layout_width="70dp"
+            android:layout_height="33dp"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/logo" />
+
+        <Button
+            android:id="@+id/tvfan_more"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/index_nav_more_icon_selector"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginRight="10dp"
+            android:clickable="true"/>
+        <Button
+            android:id="@+id/tvfan_history"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toLeftOf="@id/tvfan_more"
+            android:layout_centerVertical="true"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/index_nav_history_icon_selector"
+            android:clickable="true"/>
+        <Button
+            android:id="@+id/tvfan_search"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tvfan_history"
+            android:layout_toRightOf="@id/tvfan_logo"
+            android:background="@drawable/search_frame_line"
+            style="?android:attr/borderlessButtonStyle"
+            android:clickable="true"/>
+        <Button
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_toRightOf="@id/tvfan_logo"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginLeft="18dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/search_icon"/>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>
+

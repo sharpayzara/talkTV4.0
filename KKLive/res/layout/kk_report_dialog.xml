@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/back_view"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/kk_dialog_view_content_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingBottom="8dip"
+            android:paddingTop="8dip"
+            android:text="@string/kk_room_mem_list_report"
+            android:background="@drawable/kk_dialog_view_top_bg"
+            android:textColor="@color/kk_remove_red_tip"
+            android:textSize="@dimen/kk_title_text" />
+
+        <com.melot.meshow.widget.ToggleButtonGroupTableLayout
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:textColor="@color/kk_text_gray"
+            android:textSize="@dimen/kk_text_big_size" >
+
+            <TableRow >
+                 <RadioButton
+                     android:id="@+id/yhsq"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/kk_room_mem_report_bawdy"
+                     android:textColor="@color/kk_text_gray"
+                     android:textSize="@dimen/kk_text_big_size" >
+                 </RadioButton>
+
+                 <RadioButton
+                     android:id="@+id/rsgj"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="30dip"
+                     android:text="@string/kk_room_mem_report_attack"
+                     android:textColor="@color/kk_text_gray" >
+                 </RadioButton>
+             </TableRow>
+
+             <TableRow>
+
+                 <RadioButton
+                     android:id="@+id/ljgg"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/kk_room_mem_report_spam"
+                     android:textColor="@color/kk_text_gray"
+                     android:textSize="@dimen/kk_text_big_size" >
+                 </RadioButton>
+
+                 <RadioButton
+                     android:id="@+id/other"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="30dip"
+                     android:text="@string/kk_room_mem_report_other"
+                     android:textColor="@color/kk_text_gray" >
+                 </RadioButton>
+            </TableRow>
+        </com.melot.meshow.widget.ToggleButtonGroupTableLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip" >
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kk_edittext_dialog_bg"
+                android:gravity="top"
+                android:hint="补充内容..."
+                android:imeOptions="actionDone"
+                android:minHeight="60dip"
+                android:maxHeight="80dip"
+                android:paddingBottom="10dip"
+                android:paddingLeft="10dip"
+                android:paddingTop="10dip"
+                android:visibility="visible"
+                android:maxLength="50"
+                android:textColorHint="@color/kk_app_color_edit_hint"
+                android:textColor="@color/kk_room_text_black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kk_popup_view_horizontal_line" >
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dip"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/kk_custom_dialog_btn"
+                android:textColor="@color/kk_text_gray"
+                android:textSize="@dimen/kk_text_big_size"
+                android:text="@string/kk_cancel" />
+            <ImageView android:layout_width="1px" android:layout_height="fill_parent"
+                       android:background="@drawable/kk_popup_view_vertical_line"/>
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+
+                android:enabled="false"
+                android:gravity="center"
+                android:background="@drawable/kk_custom_dialog_btn"
+                android:textColor="@color/kk_standard_blue"
+                android:textSize="@dimen/kk_text_big_size" 
+                android:text="@string/kk_submit"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

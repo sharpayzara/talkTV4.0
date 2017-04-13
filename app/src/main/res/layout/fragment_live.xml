@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+            <com.sumavision.talktv2.videoplayer.view.LivePlayerVideoView
+                android:id="@+id/talktv_videoview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/video_layout">
+            <LinearLayout
+                android:id="@+id/list_live"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#f8f8f8">
+
+                    <ListView
+                        android:id="@+id/list_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        android:divider="#e5e5e5"
+                        android:dividerHeight="0.5dp" >
+                    </ListView>
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="match_parent"
+                        android:background="#e0e0e0"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/channel_list"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:listSelector="@android:color/transparent"
+                    android:background="@color/white"
+                    style="@style/listViewStyle"
+                    />
+            </LinearLayout>
+            <com.sumavision.talktv2.ui.widget.LoadingLayout
+                android:id="@+id/loadingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+            </com.sumavision.talktv2.ui.widget.LoadingLayout>
+        </RelativeLayout>
+
+</RelativeLayout>

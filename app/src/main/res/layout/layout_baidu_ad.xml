@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/rlTemplate2"
+    android:background="#fbdbc2"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/iv_icon2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/iv_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_icon2"
+        android:layout_margin="10dp"
+        android:singleLine="true"
+        android:textSize="20sp"
+        android:textColor="#000"
+
+        />
+    <TextView
+        android:id="@+id/iv_desc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_icon2"
+        android:layout_below="@id/iv_title2"
+        android:layout_marginLeft="8dp"
+        android:textColor="#000"
+        />
+    <TextView
+        android:id="@+id/iv_cta"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:textColor="#ffffff"
+        android:background="#8ec52f"
+        android:gravity="center"
+        />
+</RelativeLayout>

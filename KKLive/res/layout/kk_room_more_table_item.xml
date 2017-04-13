@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/root"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dip" >
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:onClick="roomRankClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/kk_room_fs_icon" />
+
+            <TextView
+                android:id="@+id/percent_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/kk_background_white" />
+
+            <View
+                android:id="@+id/mark"
+                android:layout_width="1dip"
+                android:layout_height="1dip"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dip"
+                android:layout_marginTop="8dip"
+                android:layout_toRightOf="@+id/mark"
+                android:background="@drawable/kk_news_bg_flag"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/flagnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/flagnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/kk_onlive_number_tip_bg"
+                    android:gravity="center"
+                    android:minHeight="18dip"
+                    android:minWidth="18dip"
+                    android:padding="1dip"
+                    android:text="1"
+                    android:textColor="@color/kk_background_white"
+                    android:textSize="@dimen/kk_text_10_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dip"
+                android:gravity="center"
+                android:text="@string/kk_room_rank_title"
+                android:textColor="@color/kk_app_color_black" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

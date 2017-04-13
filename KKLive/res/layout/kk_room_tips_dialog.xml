@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="274dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/kk_dialog_view_content_bg"
+        android:orientation="vertical"
+         >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/kk_dialog_view_top_bg"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingBottom="8dip"
+            android:paddingTop="8dip"
+            android:text="title"
+           android:textColor="@color/kk_dynamic_fontcolor_context"
+            android:textSize="@dimen/kk_text_dialog_title_size" />
+
+<!--         <TextView -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="0.3dip" -->
+<!--             android:background="@color/kk_app_color_dark_gray" /> -->
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="msg"
+            android:textColor="@color/kk_text_gray" />
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/kk_match_uncometitle"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:gravity="center_horizontal"
+            >
+
+          
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/kk_custom_dialog_btn"
+                android:textColor="@color/kk_text_gray"
+                android:textSize="@dimen/kk_text_big_size" 
+                android:visibility="gone"
+                />
+            <View 
+                android:id="@+id/middle_line"
+                android:visibility="gone"
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:background="@color/kk_match_uncometitle"
+                />
+              <Button
+                android:id="@+id/next_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/kk_custom_dialog_btn"
+                android:textColor="@color/kk_standard_blue"
+                android:textSize="@dimen/kk_text_big_size" />
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

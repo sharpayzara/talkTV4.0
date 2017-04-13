@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/change_cache_path_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="更改缓存路径"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFF1F1F1"></View>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/change_cache_path_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_sdcard"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="72dp">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="SD卡"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/sdcard_leftSize_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:text="剩余"-->
+    <!--android:textSize="10sp" />-->
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/sdcard_checkbox"-->
+    <!--android:layout_width="15dp"-->
+    <!--android:layout_height="15dp"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@drawable/checkbox_style"-->
+    <!--android:button="@null"-->
+    <!--android:clickable="false"-->
+    <!--android:focusable="false"-->
+    <!--android:focusableInTouchMode="false" />-->
+    <!--</RelativeLayout>-->
+
+</LinearLayout>

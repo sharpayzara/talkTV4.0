@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:src="@mipmap/update_head"/>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                tools:text="4.0.0.1版本上线" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#ffd0d0d0" />
+
+        <LinearLayout
+            android:id="@+id/update_no_force"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="55.0dip"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <ImageButton
+                android:id="@+id/negativeButton"
+                android:background="@android:color/transparent"
+                android:src="@drawable/update_cancle_selector"
+                android:layout_width="114.0dip"
+                android:layout_height="35.0dip"
+                android:scaleType="fitXY"
+                android:padding="3dp"
+                android:gravity="center" />
+
+            <ImageButton
+                android:id="@+id/positiveButton"
+                android:background="@android:color/transparent"
+                android:src="@drawable/update_force_selector"
+                android:layout_width="114.0dip"
+                android:layout_height="35.0dip"
+                android:scaleType="fitXY"
+                android:padding="3dp"
+                android:layout_marginLeft="20.0dip"
+                android:gravity="center"  />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/update_force"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="55.0dip"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <ImageButton
+                android:id="@+id/updateButton"
+                android:background="@android:color/transparent"
+                android:src="@drawable/update_confirm_selector"
+                android:layout_width="250dp"
+                android:layout_height="35.0dip"
+                android:scaleType="fitXY"
+                android:padding="3dp"
+                android:gravity="center"  />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

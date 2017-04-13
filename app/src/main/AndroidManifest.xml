@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sumavision.talktv2"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk tools:overrideLibrary="tv.danmaku.ijk.media.player_arm64,com.example.ijkplayer_x86_64" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <supports-screens android:anyDensity="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 百度推送权限的补充-->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <application
+        android:name=".BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+
+        <!-- 搜狐sdk -->
+        <!-- <meta-data -->
+        <!-- android:name="SOHUVIDEO_CHANNEL" -->
+        <!-- android:value="10051" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="SOHUVIDEO_KEY" -->
+        <!-- android:value="370f37af1847ee3308e77f86629f3955" /> -->
+
+        <meta-data
+            android:name="SOHUVIDEO_CHANNEL"
+            android:value="18420" />
+        <meta-data
+            android:name="SOHUVIDEO_KEY"
+            android:value="fe61dd4bb0e0774e890d064e13864b34" />
+        <meta-data
+            android:name="BaiduMobAd_APP_ID"
+            android:value="af91a5f1" />
+
+        <service
+            android:name="com.sohuvideo.player.statistic.LogService"
+            android:exported="false"
+            android:label="CoreService" />
+
+        <activity android:name="com.sohu.tv.news.ads.sdk.core.PadDetailsActivity">
+            <intent-filter>
+                <action android:name="com.sdk.pad.details" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- PPTV -->
+        <!-- 必须配置action，否则无法跨进程启动 -->
+        <service android:name="com.pplive.sdk.PPTVSdkService">
+            <intent-filter>
+                <action android:name="com.pplive.sdk.service" />
+            </intent-filter>
+        </service>
+        <service android:name="com.sumavision.offlinelibrary.core.DownloadService" />
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver
+            android:name=".util.MyBaiduPushMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push必须的receviver和service声明 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+       <!-- <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />-->
+        <service android:name="com.sumavision.cachingwhileplaying.CachingWhilePlayingService" />
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <!-- 适配Android N系统必需的ContentProvider声明，写权限包含应用包名 -->
+        <provider
+            android:name="com.baidu.android.pushservice.PushInfoProvider"
+            android:authorities="ccom.sumavision.talktv2.bdpush"
+            android:exported="true"
+            android:protectionLevel="signature"
+            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.sumavision.talktv2" />
+        <!-- 在百度开发者中心查询应用的API Key 百度页面测试 -->
+         <meta-data
+         android:name="api_key"
+         android:value="bqBcegEqPdz4OifLXaGkNyKS" />
+
+
+        <!-- 在百度开发者中心查询应用的API Key 正式 -->
+        <!--<meta-data
+            android:name="api_key"
+            android:value="4AA6QWb8ZrM8MG8YLLEQOAIp" />-->
+
+        <activity
+            android:name=".ui.activity.TVFANActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.activity.DragSettingActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"
+            android:label="@string/title_activity_drag_setting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="cachetvfanphone" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="4fcee97a5270152e2c000073" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="guanWang" />
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.gms.version" -->
+        <!-- android:value="@integer/google_play_services_version" /> -->
+
+        <activity
+            android:name=".videoplayer.test.PlayerActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".ui.activity.Game37WanActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WebVedioActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.activity.WeBADActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true" >
+            <use-sdk>19</use-sdk>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sumavision.talktv2.ui.activity.TVFANActivity" />
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="tvfan.com"
+                    android:pathPrefix="/share"
+                    android:scheme="talktvmedia" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".videoplayer.test.PPTVPlayerActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".videoplayer.activity.CachePlayerActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.activity.ProgramDetailActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sumavision.talktv2.ui.activity.TVFANActivity" />
+            <!--
+            <intent-filter>
+                <action android:name="com.sdk.pad.details" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="tvfan.com"
+                    android:pathPrefix="/share"
+                    android:scheme="talktvprogramdetail" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MediaDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sumavision.talktv2.ui.activity.TVFANActivity" />
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="tvfan.com"
+                    android:pathPrefix="/share"
+                    android:scheme="talktvmedia" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.WatchHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RSplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LaunchStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.SplashActivity"></activity>
+        <activity android:name=".ui.activity.LiveCopyrightActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activity.PreferenceEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TestPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LiveDetailActivity"
+            android:label="LiveDetailActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.activity.YsqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ProgramListActivity"
+            android:screenOrientation="portrait" />
+
+        <instrumentation
+            android:name="android.test.InstrumentationTestRunner"
+            android:label="Test"
+            android:targetPackage="com.sumavision" />
+
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SpecialActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sumavision.talktv2.ui.activity.TVFANActivity" />
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="tvfan.com"
+                    android:pathPrefix="/share"
+                    android:scheme="talktvmedia" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SpecialDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sumavision.talktv2.ui.activity.TVFANActivity" />
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="tvfan.com"
+                    android:pathPrefix="/share"
+                    android:scheme="talktvmedia" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.PayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SDK_WebView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FeedbackWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FindPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyIntegralActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NewScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100757629" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="net.sourceforge.simcpux.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" />
+        service>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.baidu.mobads.AppActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 必需： 声明 BaiduActivity， 否则可能导致计费不正常 -->
+        <activity
+            android:name="com.baidu.mobad.feeds.BaiduActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation" />
+
+
+        <receiver android:name="com.sumavision.talktv2.ui.receiver.TANetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- wakeup -->
+        <service
+            android:name=".wakeup.Service1"
+            android:process=":process1" />
+
+        <receiver
+            android:name=".wakeup.Receiver1"
+            android:process=":process1" />
+
+        <service
+            android:name=".wakeup.Service2"
+            android:process=":process2" />
+
+        <receiver
+            android:name=".wakeup.Receiver2"
+            android:process=":process2" />
+
+        <activity
+            android:name=".wakeup.Main2Activity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name=".ui.activity.CreditActivity" />
+        <!-- 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
+        <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.sumavision.talktv2" />
+        <permission
+            android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.sumavision.talktv2"
+            android:protectionLevel="normal"></permission>
+
+    </application>
+
+</manifest>

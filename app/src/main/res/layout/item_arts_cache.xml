@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_rlt"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="14sp"
+        tools:text="20160215   刘在石受罚惨变蓝精灵" />
+
+    <TextView
+        android:id="@+id/item_count"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_below="@id/item_name"
+        android:drawableLeft="@mipmap/playdetail_playtimes"
+        android:gravity="center_vertical"
+        android:paddingTop="3dp"
+        android:textSize="12sp"
+        tools:text=" 311万次播放"></TextView>
+
+    <ImageView
+        android:id="@+id/selected_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/selected"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/art_cached_tv_in_cache_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:text="已缓存"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/art_cached_iv_in_cache_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/item_name"
+        android:layout_toLeftOf="@id/art_cached_tv_in_cache_popup"
+        android:src="@mipmap/cached_pic"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/art_caching_tv_in_cache_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:text="缓存中"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/art_caching_iv_in_cache_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/art_caching_tv_in_cache_popup"
+        android:src="@mipmap/caching_pic"
+        android:visibility="gone" />
+</RelativeLayout>

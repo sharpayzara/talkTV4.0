@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.melot.meshow.room.RoomMemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/mem_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rank_layout"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@drawable/kk_separator"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/kk_room_color_list_selector"
+        android:scrollbars="none" />
+    
+    <ProgressBar 
+        android:id="@+id/roommempro"
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_width="22dip"
+        android:layout_height="22dip"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+</com.melot.meshow.room.RoomMemLayout>

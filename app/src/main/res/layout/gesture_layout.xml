@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gesturelayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#BF000000"
+    android:visibility="gone">
+    <!--手势控制音量和亮度-->
+
+    <ImageView
+        android:id="@+id/gesturelayout_iv_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/light"
+        />
+
+   <!-- <View
+        android:id="@+id/middle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" />-->
+
+    <TextView
+        android:id="@+id/degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="111"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+</LinearLayout>

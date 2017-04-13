@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sumavision.talktv2.ui.widget.HeadControlPanel xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_panel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_alignParentTop="true"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/left_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true" />
+
+    <com.sumavision.talktv2.ui.widget.MyLinearLayout
+        android:id="@+id/left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:visibility="visible"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/back_icon"
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/back_selector"
+            android:textSize="15sp" />
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/back_line"/>
+    </com.sumavision.talktv2.ui.widget.MyLinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/midle_title"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@id/left_btn"
+        android:textColor="@color/head_mid_txt" />
+    <ImageView
+        android:id="@+id/corner_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@id/midle_title"
+        android:src="@mipmap/list_more_icon_nor"/>
+
+    <com.sumavision.talktv2.ui.widget.MyLinearLayout
+        android:id="@+id/right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/right_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/head_mid_txt"
+            tools:text="观看" />
+
+        <ImageButton
+            android:id="@+id/right_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/right_title"
+            android:textColor="@color/head_mid_txt"
+            tools:src="@mipmap/manage_nor_btn"
+            android:background="@android:color/transparent"
+            android:textSize="15sp" />
+    </com.sumavision.talktv2.ui.widget.MyLinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/watch_history_bg"
+        android:layout_alignParentBottom="true"/>
+</com.sumavision.talktv2.ui.widget.HeadControlPanel>

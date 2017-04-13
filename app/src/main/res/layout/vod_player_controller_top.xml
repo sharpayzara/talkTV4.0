@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/playerControllerHeader"
+    android:layout_width="match_parent"
+    android:layout_height="48dip"
+    android:background="@mipmap/play_upper"
+    android:clickable="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true">
+
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="26dip"
+        android:layout_height="26dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@mipmap/play_right_btn"
+        />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/btnBack"
+        tools:text="111"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:layout_marginRight="100dp"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:id="@+id/battery_time"
+        android:layout_width="60dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        >
+
+        <!--<ImageView
+            android:id="@+id/fullbattery"
+            android:layout_width="32dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dip"
+            android:scaleType="fitXY"
+            android:layout_marginTop="5dip"/>-->
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:gravity="right"
+            android:text="15:00"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/fav"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/battery_time"
+        android:layout_marginRight="20dp"
+        android:padding="15dp"
+        android:src="@mipmap/playdetail_collect_nor_btn"
+        android:background="@color/transparent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

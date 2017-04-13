@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@mipmap/nav_right_icon"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:text="缓存"/>
+
+
+        <TextView
+            android:id="@+id/edge_acuity"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:drawableRight="@mipmap/down_nor"
+            android:text="标清 "/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/gird_cache_line"
+        android:layout_below="@id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/play_line"/>
+    <com.sumavision.talktv2.ui.widget.LMRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_below="@id/gird_cache_line">
+    </com.sumavision.talktv2.ui.widget.LMRecyclerView>
+    <RelativeLayout
+        android:id="@+id/start_rlt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/watch_history_bg">
+        <TextView
+            android:id="@+id/start_cache_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textColor="@color/cache_start_txt"
+            android:layout_marginRight="5dp"
+            android:text="开始缓存"/>
+        <TextView
+            android:id="@+id/selection_tv"
+            android:layout_toRightOf="@id/start_cache_txt"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="0"
+            android:textColor="@color/white"
+            android:background="@mipmap/playdetail_download_nor_btn"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+

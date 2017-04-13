@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:maxLines="2"
+            android:padding="5dp"
+            android:background="@mipmap/play_upper"
+            android:textColor="@color/white"
+            android:text="心里都有阴影了，博尔特被摄影师“追尾”，摔个四脚朝天"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/hot_play_play_btn"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/desc_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:text="首先可以看到，在ACTION_DOWN和ACTION_POINTER中主要是进行当前事件模式的确定。当我们按下一个点时，会触发Down事件，而按下第二个点后，又会触发Action_Pointer_Down事件，在此我们把按下一个点标记为拖动事件，按下两个点标记为缩放事件。先跟踪缩放事件方法setZoomMatrix(event);"/>
+</LinearLayout>

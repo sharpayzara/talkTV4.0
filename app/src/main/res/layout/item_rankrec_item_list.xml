@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="vertical"
+    android:layout_marginRight="2dp"
+    android:id="@+id/item_rlt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_color">
+
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        tools:text="最好的我们"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/user_center_txt"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"/>
+    <FrameLayout
+        android:id="@+id/item_frame"
+        android:layout_above="@id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@mipmap/image"
+        >
+        <ImageView
+            android:id="@+id/item_imgtop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/top1"
+            />
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"/>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/remark_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:background="@color/list_item_bg"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/item_frame"
+        tools:text="更新至2015.04.04"/>
+
+</RelativeLayout>

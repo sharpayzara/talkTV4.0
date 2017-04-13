@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" 
+    android:background="@drawable/kk_rank_list_item_bg_white"
+    >
+
+	<ImageView
+	    android:id="@+id/line_image1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="1px"
+	    android:background="@color/kk_match_uncometitle" />
+
+    <ListView
+        android:id="@+id/rank_color_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/kk_match_uncometitle"
+        android:dividerHeight="1px"
+        android:fadingEdge="none"
+        android:gravity="center"
+        android:scrollbars="none" />
+    <ImageView
+	    android:id="@+id/line_image2"
+	    android:layout_width="fill_parent"
+	    android:layout_height="1px"
+	    android:background="@color/kk_match_uncometitle" />
+</LinearLayout>

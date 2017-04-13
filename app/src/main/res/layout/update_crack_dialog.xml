@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/UpdateDialog"
+    android:layout_width="320dp"
+    android:layout_height="165dp"
+    android:background="@drawable/shape_crackupdatedialog"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="100dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        tools:text="ss" />
+
+    <!-- <ProgressBar
+         android:id="@+id/progressbar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="25dp"
+         android:indeterminateDrawable="@drawable/progress_bar_rotate" />-->
+    <com.sumavision.talktv2.ui.widget.PPTVLoading
+        android:id="@+id/progressbar"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="25dp" />
+
+</RelativeLayout>

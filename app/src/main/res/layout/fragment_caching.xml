@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:id="@+id/rl_msg_null"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_caching"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/download"
+            android:layout_above="@+id/tv_caching"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="17dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_caching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无缓存视频"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/tv_caching2"
+            />
+        <TextView
+            android:id="@+id/tv_caching2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在详情页可以点击缓存按钮进行缓存"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_centerInParent="true"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_caching_full"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ListView
+            android:id="@+id/rv_caching"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_caching_btn"
+            >
+        </ListView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ededed"
+            android:layout_above="@+id/rl_caching_btn"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_caching_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_caching_pause"
+                android:layout_width="165dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_toLeftOf="@+id/caching_btn_center"
+                android:background="@drawable/pause_all_selector" />
+
+            <View
+                android:id="@+id/caching_btn_center"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"></View>
+
+            <Button
+                android:id="@+id/btn_caching_start"
+                android:layout_width="165dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@id/caching_btn_center"
+                android:background="@drawable/start_all_selector" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

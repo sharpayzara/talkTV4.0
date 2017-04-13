@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include layout="@layout/tool_bar"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            app:tabSelectedTextColor="#f02323"
+            app:tabTextColor="#555555"
+            app:tabIndicatorColor="#f02323"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ImageView
+            android:id="@+id/lines"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg_color"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lines" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/play_line"/>
+        <com.sumavision.talktv2.ui.widget.LoadingLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+        </com.sumavision.talktv2.ui.widget.LoadingLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

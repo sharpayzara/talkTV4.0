@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="150dip"
+    android:layout_height="40dip"
+    android:background="@android:color/transparent"
+    >
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/livetv_paly_channel_bg_gray_selected"
+        android:visibility="invisible"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/iv_channel_type_selected"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:src="@mipmap/livetv_paly_channel_selected_icon"
+        android:layout_marginRight="8dip"
+        android:layout_marginLeft="15dip"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_channel_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="全部"
+        android:textColor="@color/channel_list_textcolor"
+        android:layout_toRightOf="@+id/iv_channel_type_selected"
+        android:textSize="@dimen/mytextsize4"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

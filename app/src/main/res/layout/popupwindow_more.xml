@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:id="@+id/ll_pop"
+    >
+<LinearLayout
+    android:id="@+id/ll_morewindow_cache"
+    android:layout_width="110dp"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:clickable="true">
+    <ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="10dp"
+    android:src="@mipmap/index_nav_download_icon_nor"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="缓存"
+        android:textColor="#555555"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"/>
+</LinearLayout>
+<!--<LinearLayout-->
+    <!--android:id="@+id/ll_morewindow_messeage"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:clickable="true">-->
+    <!--<ImageView-->
+        <!--android:layout_width="24dp"-->
+        <!--android:layout_height="24dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:src="@mipmap/index_nav_news_icon_nor"-->
+        <!--/>-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="13sp"-->
+        <!--android:text="消息"-->
+        <!--android:textColor="#555555"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="16dp"/>-->
+
+<!--</LinearLayout>-->
+<LinearLayout
+    android:id="@+id/ll_morewindow_setting"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:clickable="true"
+    >
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/index_nav_install_icon_nor"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="设置"
+        android:textColor="#555555"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"/>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_morewindow_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:clickable="true"
+        >
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/qr_code_black_icon"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="扫一扫"
+            android:textColor="#555555"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="14dp"/>
+    </LinearLayout>
+</LinearLayout>

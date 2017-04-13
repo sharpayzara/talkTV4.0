@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="274dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/kk_dialog_view_content_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="37dip"
+            android:background="@drawable/kk_dialog_view_top_bg"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/kk_dynamic_fontcolor_context"
+            android:textSize="@dimen/kk_text_dialog_title_size" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="25dip"
+            android:textColor="@color/kk_room_text_gray"
+            android:textSize="@dimen/kk_text_big_size" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="13dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:button="@drawable/kk_circle_checkbox_bg"
+            android:checked="false"
+            android:textColor="@color/kk_room_text_gray"
+            android:textSize="@dimen/kk_text_big_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/kk_popup_view_horizontal_line" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dip"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/negative_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/kk_custom_dialog_btn"
+                android:gravity="center"
+                android:textColor="@color/kk_room_text_gray"
+                android:textSize="@dimen/kk_text_big_size" />
+
+            <LinearLayout
+                android:id="@+id/line_button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/kk_popup_view_vertical_line" 
+                android:orientation="vertical"/>
+
+            <Button
+                android:id="@+id/positive_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/kk_custom_dialog_btn" 
+                android:gravity="center"
+                android:textColor="@color/kk_standard_blue"
+                android:textSize="@dimen/kk_text_big_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

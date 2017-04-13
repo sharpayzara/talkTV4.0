@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/kk_me_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/kk_title_bar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/top_view"
+        android:background="@color/kk_background_white"
+        android:layout_marginTop="11dp"
+         >
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/kk_match_uncometitle"
+            />
+        
+		<LinearLayout 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+		    >
+		     <TextView
+            android:id="@+id/your_account_is"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:text="@string/your_id"
+            android:textColor="@color/kk_dynamic_fontcolor_context"
+            android:textSize="@dimen/kk_text_large_size" />
+		     
+		      <TextView
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:textColor="@color/kk_standard_blue" 
+            android:textSize="@dimen/kk_text_large_size"
+            />
+		</LinearLayout>
+       
+
+       
+
+        <RelativeLayout
+            android:id="@+id/account_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/account_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                android:text="@string/your_nickname"
+                 android:textColor="@color/kk_dynamic_fontcolor_context"
+            android:textSize="@dimen/kk_text_large_size"/>
+
+            <EditText
+                android:id="@+id/username_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="32dp"
+                android:layout_toRightOf="@+id/account_pre"
+                android:background="@drawable/kk_edittext_bg"
+                android:gravity="center_vertical"
+                android:hint="@string/kk_register_must_input"
+                android:inputType="textPhonetic"
+                android:maxLength="10"
+                android:singleLine="true"
+                 android:textColor="@color/kk_dynamic_fontcolor_context"
+            android:textSize="@dimen/kk_text_big_size" />
+
+            <ImageView
+                android:id="@+id/username_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/username_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dip"
+                android:onClick="clearNameEdit"
+                android:src="@drawable/btndelete_selector"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <!-- <RelativeLayout
+            android:id="@+id/invitation_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_layout"
+            android:layout_marginTop="24dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/invitation_pre"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="8dip"
+                android:text="@string/your_invitation_code"
+                android:textColor="@color/kk_app_color_dark_gray"
+                android:textSize="@dimen/kk_text_normal_size" />
+
+            <EditText
+                android:id="@+id/invitation_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@+id/invitation_pre"
+                android:background="@drawable/kk_edittext_bg"
+                android:gravity="center_vertical"
+                android:hint="@string/kk_register_code_hint"
+                android:inputType="numberSigned"
+                android:paddingLeft="5dip"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/invitation_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:src="@drawable/btndelete_selector"
+                android:visibility="invisible" />
+        </RelativeLayout> -->
+
+        <TextView
+            android:id="@+id/invitation_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invitation_view"
+            android:layout_marginTop="8dp"
+            android:text="@string/kk_register_code_info"
+            android:textColor="@color/kk_app_color_dark_gray"
+            android:textSize="@dimen/kk_text_small_size"
+            android:visibility="gone" />
+
+
+            <include
+                android:id="@+id/choice_include"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                layout="@layout/kk_sex_select_view"
+                 />
+            <ImageView 
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/kk_match_uncometitle"
+                android:layout_marginTop="20dp"
+                />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/account_info_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/kk_register_btn"
+        android:onClick="onCompleteClick"
+        android:text="@string/login_now"
+        android:textSize="@dimen/kk_button_text"
+        android:textColor="@color/kk_color_btn" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/login"
+        android:gravity="bottom"
+        android:layout_marginBottom="50dp"
+         >
+
+        <LinearLayout
+            android:id="@+id/room_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dip"
+            android:gravity="bottom"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                 >
+
+                <TextView
+                    android:id="@+id/recommond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/register_recommend"
+                    android:textColor="@color/kk_text_gray"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dip"
+                    android:layout_toRightOf="@+id/recommond"
+                    android:background="@color/kk_match_uncometitle" />
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dip"
+                android:layout_marginRight="11dip"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:horizontalSpacing="6dip"
+                android:listSelector="@android:color/transparent"
+                android:cacheColorHint="@android:color/transparent"
+                android:numColumns="4"
+                android:scrollbars="none"
+                 >
+            </GridView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

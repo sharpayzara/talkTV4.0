@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="160dip"
+    android:layout_height="match_parent"
+    android:background="#D9000000">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:textSize="20sp"
+        android:text="换源"
+        android:textColor="#cccccc"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dip"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@+id/title"
+        android:background="#cccccc"/>
+    
+    <ListView
+        android:id="@+id/sourcelist"
+        android:layout_width="120dip"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="20dip"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:layout_marginTop="40dip"/>
+
+</RelativeLayout>

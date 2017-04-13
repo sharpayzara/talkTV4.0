@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@color/white">
+        
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="18dip"
+            android:layout_height="34dip"
+            android:src="@mipmap/nav_right_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:background="@color/transparent"
+            />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="1dip"
+            android:layout_height="34dip"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"
+            android:background="#e7e7e7"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/line"
+            android:layout_centerVertical="true"
+            android:text="节目单"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dip"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#B8B8B8"
+            android:layout_alignParentBottom="true"/>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#f7f7f7"
+        android:layout_below="@+id/top"
+        >
+
+        <ImageView
+            android:id="@+id/quan"
+            android:layout_width="80dip"
+            android:layout_height="60dip"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/livetvlogo"/>
+        <ImageView
+            android:id="@+id/channel_pic"
+            android:layout_width="64dip"
+            android:layout_height="32dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="18dip"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/channel_tv_logo_default"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/fav"
+            android:layout_width="43dip"
+            android:layout_height="43dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/livetv_playbill_collect_nor_btn"
+            android:background="@color/transparent"
+            />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="43dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fav"
+            android:background="#e7e7e7"
+            />
+        
+        <View
+            android:id="@+id/center"
+            android:layout_width="match_parent"
+            android:layout_height="8dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fav"
+            android:background="@color/transparent"
+            />
+
+        <TextView
+            android:id="@+id/channel_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/channel_pic"
+            android:layout_toLeftOf="@+id/fav"
+            android:layout_above="@+id/center"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+            android:text="中央一套"
+            android:textSize="18sp"
+            android:textColor="@color/red"
+            />
+
+        <TextView
+            android:id="@+id/current_program"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/center"
+            android:layout_toRightOf="@+id/channel_pic"
+            android:layout_toLeftOf="@+id/fav"
+            android:layout_marginLeft="15dip"
+            android:text="奔跑吧兄弟"
+            android:textSize="11sp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#B8B8B8"
+        android:layout_below="@id/title_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider">
+        <ListView
+            android:id="@+id/list_week"
+            android:layout_width="90dip"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:background="#f1f1f1"/>
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="#e1e1e1"
+            android:layout_toRightOf="@+id/list_week"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/v_line"
+            >
+            <ListView
+                android:id="@+id/list_program"
+                style="@style/listViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/transparent"
+                android:listSelector="@android:color/transparent"
+                android:divider="#e1e1e1"
+                />
+
+            <TextView
+                android:id="@+id/no_program"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="暂无节目单"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

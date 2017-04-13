@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_search_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sumavision.talktv2.ui.activity.SearchActivity">
+
+    <include
+        layout="@layout/view_toolbar_search"/>
+
+    <ListView
+        android:id="@+id/hint_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/app_bar"
+        android:visibility="gone"></ListView>
+
+    <FrameLayout
+        android:id="@+id/searchcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/hint_lv" />
+</RelativeLayout>

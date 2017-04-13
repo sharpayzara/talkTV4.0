@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="2dip"
+        android:layout_height="match_parent"
+        android:background="#ea2e1d"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/channel_type_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="15dip"
+        android:background="@color/transparent"/>
+
+</LinearLayout>

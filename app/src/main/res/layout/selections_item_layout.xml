@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="55dp"
+    android:layout_height="40dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="#ffffff"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <RelativeLayout
+        android:id="@+id/item_rlt"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#555555"
+            android:gravity="center"
+            android:textSize="15sp"
+            tools:text="2"/>
+        <ImageView
+            android:id="@+id/item_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:padding="2dp"
+            android:src="@mipmap/playdetail_play1_btn"/>
+
+        <ImageView
+            android:id="@+id/tv_cached_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/cached_pic"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/tv_caching_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/caching_pic"
+            android:visibility="gone" />
+    </RelativeLayout>
+</FrameLayout>

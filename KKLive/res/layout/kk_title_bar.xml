@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/kk_background_white"
+        >
+
+    <ImageView
+            android:id="@+id/left_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="11dp"
+            android:paddingRight="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/title_left_nevigation_selector"
+            />
+
+    <TextView
+            android:id="@+id/kk_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/kk_dynamic_fontcolor_context"
+            android:textSize="20sp" />
+
+    <ImageView
+            android:id="@+id/right_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="11dp"
+            />
+
+    <TextView
+            android:id="@+id/right_bt_text"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="end"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:textColor="@drawable/kk_family_btn_bg"
+            android:visibility="visible"
+            />
+
+    <!-- <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/kk_match_uncometitle" /> -->
+         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#d1d1d1" />
+
+</RelativeLayout>

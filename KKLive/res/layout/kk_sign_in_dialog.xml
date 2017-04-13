@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="266dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="266dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/kk_dialog_view_content_bg">
+        
+        <TextView
+            android:id="@+id/kk_title_text"
+            android:layout_width="fill_parent"
+            android:layout_height="37dip"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@drawable/kk_dialog_view_top_bg"
+            android:textColor="@color/kk_text_black"
+            android:textSize="@dimen/kk_text_big_size"
+            android:text="@string/kk_task_login_series">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/middle_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/kk_title_text"
+            android:layout_marginLeft="24dip"
+            android:layout_marginRight="24dip"
+            android:layout_marginTop="15dip" >
+            
+            
+           <LinearLayout
+               android:id="@+id/day_one"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/kk_task_bg_before"
+               android:gravity="bottom"
+               android:orientation="vertical" >
+               <TextView
+                   android:id="@+id/day_one_money"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="20dip"
+                   android:shadowColor="@color/kk_continuous_shadow_color_gray"
+                   android:shadowRadius="20"
+                   android:shadowDx="20"
+                   android:shadowDy="20"
+                   android:gravity="center_horizontal"
+                   android:textColor="@color/kk_text_white"
+                   android:textSize="@dimen/kk_text_10_size"/>
+           </LinearLayout>
+
+            <ImageView
+                android:layout_width="37dip"
+                android:layout_height="match_parent"
+                android:paddingBottom="12dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/kk_sign_in_next" />
+
+            <LinearLayout
+                android:id="@+id/day_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kk_task_bg_before"
+                android:gravity="bottom"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/day_two_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:gravity="center_horizontal"
+                    android:shadowColor="@color/kk_continuous_shadow_color_gray"
+                    android:shadowRadius="20"
+                    android:shadowDx="20"
+                    android:shadowDy="20"
+                    android:textColor="@color/kk_background_white"
+                    android:textSize="@dimen/kk_text_10_size"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="37dip"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:paddingBottom="12dip"
+                android:src="@drawable/kk_sign_in_next" />
+
+            <LinearLayout
+                android:id="@+id/day_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:background="@drawable/kk_task_bg_before"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/day_three_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:gravity="center_horizontal"
+                    android:shadowColor="@color/kk_continuous_shadow_color_gray"
+                    android:shadowRadius="20"
+                    android:shadowDx="20"
+                    android:shadowDy="20"
+                    android:textColor="@color/kk_background_white"
+                    android:textSize="@dimen/kk_text_10_size" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/text_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="24dip"
+            android:paddingRight="24dip"
+            android:layout_marginTop="13dip"
+            android:layout_below="@+id/middle_view" >
+
+	        <TextView
+	            android:id="@+id/day_one_text"
+	            android:layout_width="48dip"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:textColor="@color/kk_text_gray"
+	            android:textSize="@dimen/kk_family_subtitle_size" />
+	        <ImageView
+                android:layout_width="37dip"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:scaleType="centerInside"
+                android:src="@drawable/kk_sign_in_next" />
+
+	        <TextView
+	            android:id="@+id/day_two_text"
+	            android:layout_width="48dip"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:textColor="@color/kk_text_gray"
+	            android:textSize="@dimen/kk_family_subtitle_size" />
+	        <ImageView
+                android:layout_width="37dip"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:scaleType="centerInside"
+                android:src="@drawable/kk_sign_in_next" />
+
+	        <TextView
+	            android:id="@+id/day_three_text"
+	            android:layout_width="48dip"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:textColor="@color/kk_text_gray"
+	            android:textSize="@dimen/kk_family_subtitle_size" />
+
+         </LinearLayout>
+
+        <TextView
+            android:id="@+id/kk_sign_msg_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dip"
+            android:layout_marginBottom="12dip"
+            android:gravity="center_horizontal"
+            android:textColor="@color/kk_room_text_gray"
+            android:textSize="@dimen/kk_family_subtitle_size"
+            android:text="@string/kk_task_login_series_tips" >
+        </TextView>
+        
+        
+        <ImageView
+            android:id="@+id/image_view_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kk_sign_msg_text"
+            android:background="@drawable/kk_popup_view_horizontal_line"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dip"
+            android:layout_below="@+id/image_view_line"
+            android:gravity="center_horizontal" >
+            <Button
+                android:id="@+id/sure_btn"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"  
+                android:gravity="center"
+                android:text="@string/kk_task_must_get"
+                android:background="@drawable/kk_custom_dialog_btn"
+                android:textColor="@color/kk_standard_blue"
+                android:textSize="@dimen/kk_text_big_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

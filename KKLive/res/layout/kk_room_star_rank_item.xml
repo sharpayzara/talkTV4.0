@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+         android:layout_height="69dp"
+         android:layout_centerInParent="true"
+        >
+        
+        <ImageView
+        android:id="@+id/gift_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/kk_gift_default" />
+
+    <ImageView
+        android:id="@+id/gift_week_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dip"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/kk_gift_star_icon" />
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="82dp"
+        android:layout_centerVertical="true"
+        >
+         <TextView
+        android:id="@+id/gift_name_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/kk_text_black"
+        android:textSize="16sp"
+         />
+
+    <TextView
+        android:id="@+id/gift_count_need"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip"
+        android:focusable="false"
+        android:textColor="@color/kk_room_text_gray"
+        android:textSize="14sp" >
+    </TextView>
+    </LinearLayout>
+
+   
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="82dip"
+        android:background="@color/kk_match_uncometitle" />
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

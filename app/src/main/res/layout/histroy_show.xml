@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/history_rlt"
+    android:layout_width="match_parent"
+    android:layout_height="40dip"
+    android:background="#c02fb3fe"
+    >
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="24dip"
+        android:layout_height="24dip"
+        android:layout_marginRight="6dip"
+        android:layout_marginLeft="10dip"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/history_white"/>
+
+    <ImageButton
+        android:id="@+id/hide_history_rlt"
+        android:layout_width="24dip"
+        android:layout_height="24dip"
+        android:layout_marginRight="10dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/close_white"
+        android:scaleType="fitXY"
+        android:background="@color/transparent"/>
+
+    <TextView
+        android:id="@+id/history_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/img"
+        android:layout_toLeftOf="@+id/hide_history_rlt"
+        android:gravity="center_vertical"
+        android:text="继续观看美人天下  第15级"
+        android:textSize="13sp"
+        android:textColor="@color/white"/>
+</RelativeLayout>

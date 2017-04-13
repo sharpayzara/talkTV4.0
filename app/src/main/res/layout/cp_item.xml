@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_rlt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/cp_default_color">
+
+    <RadioGroup  android:id="@+id/orderLx"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioButton android:id="@+id/orderLx1"
+            android:text="搜狐"
+            android:drawableStart="@mipmap/sohu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:checked="true"
+            android:button="@null"/>
+
+        <RadioButton android:id="@+id/orderLx2"
+            android:text="乐视网网"
+            android:textSize="14sp"
+            android:button="@null"
+            android:drawableStart="@mipmap/sohu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton android:id="@+id/orderLx3"
+            android:text="腾讯"
+            android:textSize="14sp"
+            android:button="@null"
+            android:drawableStart="@mipmap/sohu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+</RelativeLayout>

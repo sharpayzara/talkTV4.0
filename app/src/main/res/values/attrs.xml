@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <declare-styleable name="LoadingLayout">
+    <attr name="loadingView" format="reference" />
+    <attr name="wifiView" format="reference" />
+    <attr name="retryView" format="reference" />
+    <attr name="emptyView" format="reference" />
+    <attr name="errorView" format="reference" />
+  </declare-styleable>
+  <declare-styleable name="CircleImageView">
+    <attr name="border_width" format="dimension" />
+    <attr name="border_color" format="color" />
+  </declare-styleable>
+
+  <declare-styleable name="GifView">
+    <attr name="gif" format="reference" />
+    <attr name="paused" format="boolean" />
+  </declare-styleable>
+  <declare-styleable name="CustomTheme">
+    <attr name="gifViewStyle" format="reference" />
+  </declare-styleable>
+</resources>
